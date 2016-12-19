@@ -92,6 +92,7 @@ ifdef CM_VERSION
 	PACKER_VARS += -var 'cm_version=$(CM_VERSION)'
 endif
 PACKER ?= packer
+PACKER_DEBUG ?= 1
 ifdef PACKER_DEBUG
 	PACKER := PACKER_LOG=1 $(PACKER)
 else
