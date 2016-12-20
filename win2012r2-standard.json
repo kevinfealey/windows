@@ -58,6 +58,7 @@
       "iso_url": "{{ user `iso_url` }}",
       "shutdown_command": "{{ user `shutdown_command`}}",
       "type": "virtualbox-iso",
+      "post_shutdown_delay": "30s",
       "vboxmanage": [
         [
           "modifyvm",
