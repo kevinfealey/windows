@@ -94,7 +94,7 @@ endif
 PACKER ?= packer
 PACKER_DEBUG ?= 1
 ifdef PACKER_DEBUG
-	PACKER := TMPDIR=/packer/packer_tmp PACKER_LOG=1 $(PACKER)
+	PACKER := TMPDIR=/packer/packer_tmp PACKER_LOG_PATH=./packer_debug-$(CM)$(CM_VERSION)-$(BOX_VERSION).log PACKER_LOG=1 $(PACKER) -on-error=ask
 else
 endif
 BUILDER_TYPES ?= vmware virtualbox parallels
